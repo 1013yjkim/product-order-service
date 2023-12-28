@@ -20,7 +20,7 @@ public class ProductApiTest extends ApiTest{
     @Test
     void 상품등록(){
         final AddProductRequest request = 상품등록요청_생성();
-
+        //API 요청
         ExtractableResponse<Response> response = RestAssured.given().log().all()
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .body(request)
@@ -28,7 +28,7 @@ public class ProductApiTest extends ApiTest{
                 .post("/products")
                 .then()
                 .log().all().extract();
-        //API 요청
+
          assertThat(response.statusCode()).isEqualTo(HttpStatus.CREATED.value());
     }
 
