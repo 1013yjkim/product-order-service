@@ -14,8 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class ProductApiTest extends ApiTest{
-    @Autowired
-    private ProductService productService;
 
     @Test
     void 상품등록(){
